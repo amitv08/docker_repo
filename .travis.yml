@@ -6,6 +6,6 @@ before_install:
         - docker build -t amitv08/docker_repo -f Dockerfile.dev .
 
 script:
-        - docker run -e CI=true amitv08/docker_repo npm run test
+        - docker run -e CI=true amitv08/docker_repo npm run test -- --coverage
 
 language: generic 
